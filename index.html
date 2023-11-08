@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <p class="nameApp">GENERATOR PASSWORD APP</p><br />
+        <label for="darkMode">Tryb ciemny:</label>
+        <input type="checkbox" id="darkMode"><br />
+    </form>
+    <form id="passwordGeneratorForm">
+        <label for="length">Długość hasła:</label>
+        <input class="lengthPass" type="number" id="length" name="length" min="5" max="50" value="10" placeholder="5-50">
+        <br>
+        <div class="checkboxGroup">
+            <input type="checkbox" id="lowercase" name="lowercase" checked> Małe litery<br>
+            <input type="checkbox" id="uppercase" name="uppercase" checked> Duże litery<br>
+            <input type="checkbox" id="numbers" name="numbers" checked> Cyfry<br>
+            <input type="checkbox" id="special" name="special"> Znaki specjalne<br>
+        </div>
+        <input type="submit" value="Generuj hasło">
+    </form>
+    <form id="leetSpeakForm">
+        <label for="word">Wprowadź słowo:</label><br/>
+        <input class="inputLeet" type="text" id="word" name="word" class="input-field" placeholder="Twoje słowo" required=""><br/>
+        <input type="submit" value="Przerób na Hasło">
+    </form>
+    <form>
+        <p>Twoje wygenerowane hasło losowe:</p>
+        <p id="password"></p>
+        <p id="passwordStrength"></p>
+        <button id="copyButton">Kopiuj do schowka</button>
+        <p>Twoje przerobione hasło:</p>
+        <p id="leetWord"></p>
+        <p id="passwordStrengthLeet"></p>
+        <button id="copyButtonLeet">Kopiuj do schowka</button>
+    </form>
+    <form>
+        <!-- Dodajemy wyświetlanie historii haseł -->
+        <h2>Historia haseł</h2>
+        <p id="passwordHistory"></p>
+        <button id="deleteHistoryButton">Usuń historię haseł</button>
+    </form>
+    <form>Copyright © 2023 B.art</form>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
